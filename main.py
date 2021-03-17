@@ -19,7 +19,6 @@ def start_game():
     greet_user()
     mode = choose_mode()
     number_of_tries = get_number_of_tries(mode)
-
     number_to_guess = get_random_number()
 
     print_question(number_of_tries)
