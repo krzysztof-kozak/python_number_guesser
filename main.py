@@ -29,6 +29,7 @@ def start_game():
         print(GAME_WIN_MESSAGE)
     else:
         print(GAME_OVER_MESSAGE)
+        print(f"The number I was thinking of was {number_to_guess}")
 
 
 start_game()

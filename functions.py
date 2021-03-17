@@ -85,10 +85,10 @@ def check_if_correct_answer(number_to_guess, number_of_tries):
             has_guessed_correctly = True
             return True
 
-        elif player_guess > number_to_guess:
+        elif player_guess > number_to_guess and number_of_tries > 1:
             print(HINT_LOWER)
 
-        elif player_guess < number_to_guess:
+        elif player_guess < number_to_guess and number_of_tries > 1:
             print(HINT_HIGHER)
 
         number_of_tries -= 1
