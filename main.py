@@ -21,7 +21,6 @@ def start_game():
     number_of_tries = get_number_of_tries(mode)
 
     number_to_guess = get_random_number()
-    print(f'psst, the answer is {number_to_guess}')
 
     print_question(number_of_tries)
     player_answer = check_if_correct_answer(number_to_guess, number_of_tries)
