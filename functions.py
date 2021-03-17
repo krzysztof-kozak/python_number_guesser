@@ -1,4 +1,4 @@
-from random import choice
+from random import randint
 from art import logo
 
 GAME_TITLE = "Number Guesser"
@@ -37,7 +37,7 @@ def get_number_of_tries(mode):
 
 def get_random_number():
     '''Returns a random int between 1 and 100 inclusive.'''
-    return choice(range(1, 101))
+    return randint(1, 100)
 
 
 def greet_user():
