@@ -9,8 +9,6 @@ HINT_HIGHER = "\nToo low, try a higher number."
 HINT_LOWER = "\nToo high, try a lower number."
 
 
-
-
 def choose_mode():
     '''Returns string 'easy' or string 'hard'.
        Takes no arguments.
@@ -70,18 +68,20 @@ def get_player_answer():
         else:
             print("\nInvalid answer, type w whole number from 1 to 100")
 
-def check_if_correct_answer(number_to_guess ,number_of_tries):
+
+def check_if_correct_answer(number_to_guess, number_of_tries):
     '''Returns bool True or False.'''
+
     has_guessed_correctly = False
 
     while not has_guessed_correctly:
-        number_of_tries -= 1
-        player_guess = get_player_answer()
 
         if number_of_tries < 1:
             return False
 
-        elif player_guess == number_to_guess:
+        player_guess = get_player_answer()
+
+        if player_guess == number_to_guess:
             has_guessed_correctly = True
             return True
 
@@ -91,4 +91,8 @@ def check_if_correct_answer(number_to_guess ,number_of_tries):
         elif player_guess < number_to_guess:
             print(HINT_HIGHER)
 
-        print(f"\nTries remaining: {number_of_tries}")
+        number_of_tries -= 1
+        
+        if number_of_tries > 0:
+            print(f"\nTries remaining: {number_of_tries}")
+

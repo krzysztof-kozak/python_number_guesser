@@ -31,14 +31,14 @@ def start_game():
     else:
         print(GAME_OVER_MESSAGE)
 
+
 start_game()
-play_again = False
 
-
-if input("\nGo again? Type y to play or anykey to quit: ").lower() == "y":
-    play_again = True
-else:
-    print("\nGoodbye!")
+play_again = True
 
 while play_again:
-    start_game()
+    if input("\nGo again? Type y to play or anykey to quit: ").lower() == "y":
+        start_game()
+    else:
+        play_again = False
+        print("\nGoodbye!")
